@@ -1,0 +1,56 @@
+# Node modules
+node_modules/
+
+# Build folders
+dist/
+build/
+target/
+out/
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+
+# Eclipse
+.metadata/
+.classpath
+.project
+.settings/
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Uploaded files
+uploads/
+
+# Videos
+videos/
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Java
+*.class
+*.jar
+*.war
+
+# Maven
+.mvn/
+
+E:\APCLOTE_PROJ\APCLOTE_BACKEND\APCLOTE\src\main\resources
+
+# Temporary files
+tmp/
+temp/

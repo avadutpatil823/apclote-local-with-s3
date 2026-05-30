@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --color-green-400: #38bdf8;
+  --app-navbar-height: 76px;
+}
+
+
+.cart {
+  cursor: pointer;
+  transform-origin: center bottom;
+  animation: cartFlip 5s ease-in-out infinite;
+  transition: transform 0.3s;
+}
+
+.avatar-container {
+  width: 150px;
+  height: 150px;
+  background: #fcd5ce;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.face {
+  position: relative;
+}
+
+.eyes {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.eye {
+  width: 15px;
+  height: 15px;
+  background: black;
+  border-radius: 50%;
+}
+
+.mouth {
+  width: 40px;
+  height: 10px;
+  background: black;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.avatar-container.speaking .mouth {
+  height: 25px;
+  border-radius: 50%;
+}
+
+.avatar-container.speaking {
+  animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
+.cart:hover {
+  animation-play-state: paused;
+}
+
+@keyframes cartFlip {
+  0% {
+    transform: translateY(0) rotateY(0deg);
+  }
+  20% {
+    transform: translateY(-10px) rotateY(0deg);
+  }
+  40% {
+    transform: translateY(5px) rotateY(0deg);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.app-main--immersive {
+  min-height: calc(100vh - var(--app-navbar-height));
+}
